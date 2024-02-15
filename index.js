@@ -6,11 +6,11 @@ const orderArr = [];
 
 paymentForm.addEventListener("submit", (e) => {
   e.preventDefault();
+  e.target.id === "payment-form" && getFormValue();
 });
 document.addEventListener("click", function (e) {
   menuArray[e.target.id] && addOrderClick(e.target.id);
   e.target.id === "completeOrder" && payment();
-  e.target.id === "pay" && getFormValue(e);
   e.target.id === "icon" && closeBtn();
 });
 
@@ -74,7 +74,7 @@ function payment() {
   document.querySelector(".paymentMethod").classList.remove("hidden");
   document.querySelector(".container").classList.add("blur");
 }
-function getFormValue(e) {
+function getFormValue() {
   const message = document.querySelector(".span-message");
   const paymentFormData = new FormData(paymentForm);
   const name = paymentFormData.get("name");
@@ -85,7 +85,7 @@ function getFormValue(e) {
   document.getElementById("hidden").classList.add("hidden");
   setTimeout(function () {
     location.reload();
-  }, 5000);
+  }, 3000);
 }
 function closeBtn() {
   document.querySelector(".paymentMethod").classList.add("hidden");
