@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Smythe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/fe827dae0a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Lester's Diner</h1>
+        <h2>The best burgers and pizzas in town</h2>
+      </header>
+      <section>
+        <ul id="items"></ul>
+      </section>
+      <section id="hidden" class="hidden">
+        <div class="totalContainer">
+          <h4>Your Orders</h4>
+          <div id="orders" class="orders"></div>
+          <div class="total">
+            <span>Total Price:</span>
+            <span id="totalPrice"></span>
+          </div>
+          <button id="completeOrder" class="completeOrder">
+            Complete Order
+          </button>
+        </div>
+      </section>
+      <div class="message hidden"><span class="span-message"></span></div>
+    </div>
+    <div class="paymentMethod hidden">
+      <i class="fa-solid fa-x"></i>
+      <h4>Enter Card Details</h4>
+      <form id="payment-form">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Your Name"
+          required
+        />
+        <input
+          type="number"
+          id="card"
+          name="card"
+          placeholder="Enter Card Number"
+          required
+        />
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" required />
+        <button id="pay" type="submit">Pay</button>
+      </form>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

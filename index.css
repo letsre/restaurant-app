@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: "Smythe", system-ui;
+    color: whitesmoke;
+    user-select: none;
+    position: relative;
+
+}
+
+.container {
+    width: 600px;
+    height: 1160px;
+    margin: auto;
+    position: relative;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    width: 508px;
+    border-bottom: 1px solid #dedede;
+    margin: 0 auto;
+}
+
+header {
+    background: url(/img/burger.png)no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    width: 600px;
+    height: 171px;
+    /* Fixed height of the container */
+}
+
+section #hidden {
+    margin-bottom: 50px;
+}
+
+.totalContainer {
+    width: 508px;
+    margin: 50px auto;
+}
+
+ul {
+    list-style: none;
+    color: black;
+    padding: 0;
+}
+
+h1 {
+    font-size: 39px;
+    margin-left: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+h3 {
+    font-size: 70px;
+}
+
+h4 {
+    font-size: 28px;
+    margin: 0;
+    color: black;
+}
+
+#hidden h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 20px;
+    margin: 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #8b8b8b;
+}
+
+.orders {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.order {
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    color: black;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.pointer {
+    pointer-events: none;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.description {
+    margin-left: 20px;
+}
+
+.flex-container button {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin-left: auto;
+    background: none;
+    border: 1px solid #dedede;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.completeOrder {
+    height: 60px;
+    width: 508px;
+    margin: 20px 0;
+    background: #16DB99;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.paymentMethod {
+    width: 524px;
+    height: 400px;
+    border: 1px solid blgreyue;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid green;
+}
+
+.paymentMethod h4 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.paymentMethod i {
+    color: black;
+    position: absolute;
+    right: 20;
+    top: 20;
+}
+
+.paymentMethod button {
+    display: block;
+    padding: 10px;
+    width: 470px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #16DB99;
+    border: none;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.paymentMethod input {
+    display: block;
+    padding: 10px;
+    width: 470px;
+    margin: 10px 0;
+}
+
+.message {
+    border: 1px solid green;
+    width: 508px;
+    margin: 50px auto;
+    background: #ECFDF5;
+    text-align: center;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.message span {
+    color: #065F46;
+    font-size: 32px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
