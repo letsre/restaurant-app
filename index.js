@@ -11,6 +11,7 @@ document.addEventListener("click", function (e) {
   menuArray[e.target.id] && addOrderClick(e.target.id);
   e.target.id === "completeOrder" && payment();
   e.target.id === "pay" && getFormValue(e);
+  e.target.id === "icon" && closeBtn();
 });
 
 render();
@@ -64,25 +65,29 @@ function showOrders(arr) {
    </div>`;
     })
     .join("");
-  document.getElementById("hidden").classList.toggle("hidden");
+  document.getElementById("hidden").classList.remove("hidden");
   document.getElementById("totalPrice").textContent = `$${totalPrice}.00`;
   orders.innerHTML = ordersItem;
   console.log(totalPrice);
 }
 function payment() {
-  document.querySelector(".paymentMethod").classList.toggle("hidden");
-  document.querySelector(".container").classList.toggle("blur");
+  document.querySelector(".paymentMethod").classList.remove("hidden");
+  document.querySelector(".container").classList.add("blur");
 }
 function getFormValue(e) {
   const message = document.querySelector(".span-message");
   const paymentFormData = new FormData(paymentForm);
   const name = paymentFormData.get("name");
   message.textContent = `Thanks, ${name}! Your order is on its way!`;
-  document.querySelector(".container").classList.toggle("blur");
-  document.querySelector(".paymentMethod").classList.toggle("hidden");
-  document.querySelector(".message").classList.toggle("hidden");
-  document.getElementById("hidden").classList.toggle("hidden");
+  document.querySelector(".container").classList.remove("blur");
+  document.querySelector(".paymentMethod").classList.add("hidden");
+  document.querySelector(".message").classList.remove("hidden");
+  document.getElementById("hidden").classList.add("hidden");
   setTimeout(function () {
     location.reload();
   }, 5000);
+}
+function closeBtn() {
+  document.querySelector(".paymentMethod").classList.add("hidden");
+  document.querySelector(".container").classList.remove("blur");
 }

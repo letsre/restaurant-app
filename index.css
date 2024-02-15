@@ -166,6 +166,7 @@ p {
     position: absolute;
     right: 20;
     top: 20;
+    cursor: pointer;
 }
 
 .paymentMethod button {
